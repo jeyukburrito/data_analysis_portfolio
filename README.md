@@ -25,7 +25,7 @@
 - About
 
 #### Forecasting Next-Day Visits of Shared Office Customers (June 2025 ~ June 2025, 팀 프로젝트)
-- [Notebook](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers.ipynb) / PDF
+- [Notebook](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers.ipynb) / [PDF](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers.pdf)
 - About
 
 #### Anonymous Poll App Log Data Usage Analysis (July 2025 ~ , 팀 프로젝트)
