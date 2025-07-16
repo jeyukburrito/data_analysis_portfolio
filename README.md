@@ -2,7 +2,7 @@
 
 # Portfolio
 
-
+[PDF](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Portfoilo.pdf) (Last Update 25.07.17)
 
 # Personal Projects
 
