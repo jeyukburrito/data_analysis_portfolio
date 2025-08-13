@@ -1,0 +1,6 @@
+Flask==2.2.2
+gunicorn==20.1.0
+pandas
+scikit-learn # .pkl 모델을 만들 때 사용한 버전과 맞추는 것이 좋습니다.
+gcsfs
+google-cloud-storage

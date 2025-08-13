@@ -1,0 +1,82 @@
+
+version: '3.8'
+
+services:
+  # 1) Postgres DB
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+
+  # 2) Airflow Webserver
+  airflow-webserver:
+    build:
+      context: .          # 이 디렉터리의 Dockerfile을 사용
+      dockerfile: Dockerfile
+    image: custom-airflow-ml:latest  # 커스텀 이미지 태그
+    depends_on:
+      - postgres
+    environment:
+      # ── Airflow 기본 설정 ─────────────────────────────────────────
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__WEBSERVER__SECRET_KEY: mysecret
+      AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
+
+      # ── SMTP 설정 (이메일 알림이 필요하다면) ─────────────────────────
+      AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+      AIRFLOW__SMTP__SMTP_PORT: '587'
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: yooyoon97@gmail.com
+      AIRFLOW__SMTP__SMTP_STARTTLS: 'true'
+      AIRFLOW__SMTP__SMTP_SSL: 'false'
+      AIRFLOW__SMTP__SMTP_USER: yooyoon97@gmail.com
+      AIRFLOW__SMTP__SMTP_PASSWORD: "bgig fjzx mhde bxyr"  # 앱 비밀번호 등, 공백 있으면 따옴표 필수
+
+      # ── Slack Webhook 커넥션 등록 ─────────────────────────────────
+      #   AIRFLOW_CONN_<CONN_ID> 형태로 환경변수에 URL을 넣으면
+      #   DAG 에서 http_conn_id='<CONN_ID>' 로 참조할 수 있습니다.
+    ports:
+      - "8080:8080"       # Airflow Web UI
+    command: webserver    # 컨테이너 시작 시 webserver 실행
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+      - ./results:/opt/airflow/results # <<< 결과 폴더 매핑 추가
+
+  # 3) Airflow Scheduler
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom-airflow-ml:latest
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__WEBSERVER__SECRET_KEY: mysecret
+
+      # (Optional) 이메일용 SMTP 설정
+      AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+      AIRFLOW__SMTP__SMTP_PORT: '587'
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: yooyoon97@gmail.com
+      AIRFLOW__SMTP__SMTP_STARTTLS: 'true'
+      AIRFLOW__SMTP__SMTP_SSL: 'false'
+      AIRFLOW__SMTP__SMTP_USER: yooyoon97@gmail.com
+      AIRFLOW__SMTP__SMTP_PASSWORD: "bgig fjzx mhde bxyr"
+
+
+    command: scheduler     # 컨테이너 시작 시 scheduler 실행
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+      - ./results:/opt/airflow/results # <<< 결과 폴더 매핑 추가
+
+volumes:
+  postgres_db:

@@ -1,0 +1,18 @@
+========== Baseline LightGBM Result ==========
+Best Threshold: 0.3416
+Test ROC AUC: 0.9014
+Test PR AUC: 0.0846
+Confusion Matrix (Threshold: 0.3416):
+[[32576   367]
+ [  185    58]]
+Classification Report (Threshold: 0.3416):
+              precision    recall  f1-score   support
+
+   Non-Payer       0.99      0.99      0.99     32943
+       Payer       0.14      0.24      0.17       243
+
+    accuracy                           0.98     33186
+   macro avg       0.57      0.61      0.58     33186
+weighted avg       0.99      0.98      0.99     33186
+
+
