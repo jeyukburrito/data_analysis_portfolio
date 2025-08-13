@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Profile Section */
+#profile .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#profile .badge {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    margin: 0 5px;
+}
+
+/* Achievements Section */
+.achievement-card {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.achievement-card .icon {
+    font-size: 3rem;
+    color: #dee2e6; /* Default locked color */
+}
+
+.achievement-card.unlocked .icon {
+    color: #ffc107; /* Gold for unlocked */
+}
+
+.achievement-card.unlocked {
+    border: 2px solid #ffc107;
+}
+
+.achievement-card.locked {
+    opacity: 0.6;
+}
+
+.achievement-card.locked .icon {
+    color: #6c757d;
+}
+
+.achievement-card h5 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Course Card */
+.course-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+}
+
+.course-card .card-title {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+}
