@@ -23,9 +23,7 @@
 
 #### User log data analysis for a subscription-based lecture service (April 2025 ~ April 2025, 팀 프로젝트)
 - [Code/Notebook](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/User%20log%20data%20analysis%20for%20a%20subscription-based%20lecture%20service/User%20log%20data%20analysis%20for%20a%20subscription-based%20lecture%20service.ipynb) / [PDF](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/User%20log%20data%20analysis%20for%20a%20subscription-based%20lecture%20service/User%20log%20data%20analysis%20for%20a%20subscription-based%20lecture%20service.pdf)
-- 구독형 인강 서비스의 핵심 지표를 AARRR 프레임워크에 기반하여 분석한 결과, 사용자 활성화(Activation)와 유지(Retention) 단계의 이탈률이 높은 문제점을 발견했습니다. 이 문제를 해결하고자 학습 동기를 부여하는 게이미피케이션 요소를 도입한 가상의 신규 랜딩 페이지를 B안으로 설계하고, 이를 검증하기 위한 A/B 테스트를 설계했습니다. '1일차 재방문률'과 같은 구체적인 KPI를 설정하여 사용자 참여 증진 효과를 측정하는 실험을 제시해, 데이터 기반의 성장 전략을 제시하는 역량을 보여주었습니다.
-
-
+- AARRR 프레임워크를 적용하여 사용자 데이터를 분석, 리텐션(Retention) 단계가 서비스 성장의 병목 지점임을 파악했습니다. 이를 해결하기 위해 게이미피케이션 요소를 도입한 가상의 랜딩 페이지를 가설로 설정하고, 참여율을 핵심 지표로 측정하는 A/B 테스트 실험을 설계하여 데이터 기반의 문제 해결 능력을 증명했습니다.
 
 #### Forecasting Next-Day Visits of Shared Office Customers (June 2025 ~ June 2025, 팀 프로젝트)
 - [Code/Notebook](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers.ipynb) / [PDF](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers/Forecasting%20Next-Day%20Visits%20of%20Shared%20Office%20Customers.pdf)
