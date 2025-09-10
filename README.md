@@ -32,7 +32,3 @@
 #### Anonymous Poll App Log Data Usage Analysis (July 2025 ~ August 2025, 팀 프로젝트)
 - [Code/Notebook](https://github.com/jeyukburrito/data_analysis_portfolio/tree/main/Anonymous%20Poll%20App%20Log%20Data%20Usage%20Analysis/Codes) / [PDF](https://github.com/jeyukburrito/data_analysis_portfolio/blob/main/Anonymous%20Poll%20App%20Log%20Data%20Usage%20Analysis/Anonymous%20Poll%20App%20Log%20Data%20Usage%20Analysis.pdf)
 - 탐색적 데이터 분석으로 결제 전환에 영향을 미치는 핵심 지표를 발굴하고, 이를 바탕으로 결제 유저를 예측하는 머신러닝 모델 프로젝트입니다. LightGBM를 포함한 다양한 부스팅 알고리즘을 사용했습니다. 또한 예측 과정을 Docker 기반 Airflow로 자동화하여 운영 효율성을 개선하는 데이터 파이프라인을 설계했습니다.
-
-#### Reparing Data Process Mining (August 2025 ~ August 2025, 개인 프로젝트)
--
--
